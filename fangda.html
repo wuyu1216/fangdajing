@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    .sImg,.bImg{
+        width: 296px;
+        height: 220px;
+        float:left;
+        border:1px solid #ccc;
+       margin: 20px 20px;
+        position: relative;
+    }
+    .sImg>img{
+        width:296px;
+        height: 220px;
+    }
+    .bImg{
+        overflow: hidden;
+    }
+    .bImg>img{
+        position: absolute;
+        top:0;
+        left:0;
+    }
+    .sImg>.mask{
+        width: 74px;
+        height:55px;
+        position: absolute;
+        top:0;
+        left:0;
+        background-color:rgba(255,0,0,0.5);
+        z-index: 20;
+    }
+    .sImg>.opacity{
+        width: 100%;
+        height: 220px;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: 9999;
+    }
+</style>
+<body>
+    <div class="sImg">
+        <img src="img/rp2.jpg" alt="">
+        <!--遮罩-->
+        <div class="mask"></div>
+        <div class="opacity"></div>
+    </div>
+    <div class="bImg">
+        <img src="img/rp2.jpg" alt="">
+    </div>
+</body>
+</html>
+<script src="fangda.js"></script>
